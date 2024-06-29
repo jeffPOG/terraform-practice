@@ -1,3 +1,9 @@
 .terraform*
 terraform.*
 .gitattributes
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+.gitattributes
+terraform_on_aws/terraform.tfstate.backup
+terraform_on_aws/.terraform
