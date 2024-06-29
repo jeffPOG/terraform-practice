@@ -16,9 +16,8 @@ provider "aws" {
 # here I am creating an ec2 instance using the resource block
 resource "aws_instance" "Nextgen" {
   ami           = "ami-0230bd60aa48260c6" # Amazon Linux in us-east-1, update as per your region
-  instance_type = var.instance_type_list["prod"]
+  instance_type = var.instance_type_map["development"]
   key_name      = "Nextgen"
-  count         = 3
   tags = {
     Name = "Nextgen"
   }
