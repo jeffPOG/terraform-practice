@@ -25,8 +25,3 @@ resource "aws_instance" "LisaEC2" {
   key_name = "makeys"
 }
 # Hello World
-
-
-# checking notes
-
-# Brianna you are making this very difficult!!!!!
