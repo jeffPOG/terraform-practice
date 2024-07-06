@@ -19,4 +19,3 @@ resource "aws_instance" "briannaserver" {
   ami           = "ami-0230bd60aa48260c6"
   instance_type = var.instance_type_maps["development"]
 }
-# hello world
