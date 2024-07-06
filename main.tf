@@ -24,5 +24,4 @@ resource "aws_instance" "LisaEC2" {
   count    = 3
   key_name = "makeys"
 }
-
-Hello World
+# Hello World
