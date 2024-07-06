@@ -28,3 +28,5 @@ resource "aws_instance" "LisaEC2" {
 
 
 # checking notes
+
+# Brianna you are making this very difficult!!!!!
