@@ -1,2 +1,3 @@
 *.terraform
 utility-project/*.terraform
+terraform*
