@@ -1,0 +1,13 @@
+How to config github
+    git config --global user.email "jeidruw@gmail.com"
+    git config --global user.name "Jeidin12345"
+To check if git hub is configured, do the following
+    git config --list
+To begin with, do git status
+    git init 
+This is initailizing git hub to start tracking the code 
+    git add .
+Too add all local code thats in your directories to add to your repository add this https://github.com/jeffPOG/terraform-practice.git
+    git commit -m " message"
+Too push code changes to branch in remote repository jojo do this
+    git push -u origin jojo
