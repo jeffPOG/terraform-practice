@@ -4,9 +4,14 @@ terraform {
     aws = {
       source = "hashicorp/aws"
       version = "5.60.0"
+null = {
+  source = "hashicorp/null"
+  version = "~> 3.0.0"
+}
     }
   }
-}
+
+
 
 # providers block
 provider "aws" {
