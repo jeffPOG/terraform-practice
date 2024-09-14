@@ -20,15 +20,18 @@ module "nextgen_vpc" {
   enable_dns_hostnames = true
   # tags
   public_subnet_tags = {
-    name = "public-subnet"
+    Type = "public-subnet"
   }
   private_subnet_tags = {
-    name = "private-subnet"
+    Type = "private-subnet"
   }
   database_subnet_tags = {
-    name = "database-subnet"
+    Type = "database-subnet"
   }
   vpc_tags = {
     name = "nextgen-vpc"
+  }
+  tags = {
+    owner = "Jeff"
   }
 }
