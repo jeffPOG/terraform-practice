@@ -53,27 +53,20 @@ resource "null_resource" "name" {
       private_key = file("private-key/Nextgen.pem")
     }
   }
-  
-  # Local Exec Provisioner: (Destroy-Time Provisioner - Triggered during deletion of Resource)
-  provisioner "local-exec" {
-    when        = destroy
-    command     = "echo Destroy time prov `date` >> destroy-time-prov.txt"
-    working_dir = "local-exec-output-files/"
-    #on_failure = continue
-  }  
-  
-  # Remote Exec Provisioner for destroy-time
+
   provisioner "remote-exec" {
-    when = destroy
-    inline = [
-      "echo Destroy time prov `date` >> destroy-time-prov.txt"
-    ]
-    
-    connection {
-      type        = "ssh"
-      host        = self.triggers.public_ip
-      user        = self.triggers.user
-      private_key = file(self.triggers.private_key_path)
-    }
+  when = destroy
+  inline = [
+    "echo Destroy time prov `date` >> destroy-time-prov.txt"
+  ]
+  
+  connection {
+    type        = "ssh"
+    host        = self.triggers.public_ip
+    user        = self.triggers.user
+    private_key = file(self.triggers.private_key_path)
+    timeout     = "1m"
   }
+  on_failure = continue
+}
 }

@@ -14,7 +14,7 @@ module "nextgen_vpc" {
   # database_subnets
   create_database_subnet_group       = true
   create_database_subnet_route_table = true
-  database_subnets                   = ["40.0.21.0/24", "40.0.22.0/24"]
+  database_subnets                   = ["40.0.21.0/24", "40.0.22.0/24"] # private subnet
   # dns_support
   enable_dns_support   = true
   enable_dns_hostnames = true
